@@ -18,8 +18,8 @@
 
    Leave ORDER_ENDPOINT = '' to run in demo mode (just shows a toast).
    ================================================================== */
-  const ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwutuy9OAOGmpkg3GcdcuPYf5NIqdqUxBpPPT-xjSUwA-IhNI1YWD2U7BrLwcuS9fHTZQ/exec';            // <-- paste your URL here
-  const ENDPOINT_TYPE  = 'AKfycbwutuy9OAOGmpkg3GcdcuPYf5NIqdqUxBpPPT-xjSUwA-IhNI1YWD2U7BrLwcuS9fHTZQ';   // 'formspree' | 'sheet'
+  const ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyekgvrJu07ZdEn-ZRb3KoskqWnDHPgk04pbFIrX8yJfk-KCz-QEMy5hckLMaddpU9V/exec';            // <-- paste your URL here
+  const ENDPOINT_TYPE  = 'sheet';       // 'formspree' | 'sheet'
 
 (function () {
   'use strict';

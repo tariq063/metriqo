@@ -4,8 +4,8 @@
     {
       "name": "metriqo",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["-y", "http-server", "-p", "5500", "-c-1"],
-      "port": 5500
+      "runtimeArgs": ["-y", "http-server", "-p", "5599", "-c-1"],
+      "port": 5599
     }
   ]
 }

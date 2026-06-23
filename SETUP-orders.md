@@ -25,25 +25,40 @@
 
 ### ধাপ ১: একটি Google Sheet তৈরি করুন
 - https://sheets.new এ গিয়ে নতুন শিট খুলুন।
-- প্রথম সারিতে (হেডার) লিখুন:
-  `Time | Product | Name | Phone | Address | Quantity | Total`
+- হেডার নিয়ে চিন্তা করতে হবে না — নিচের কোড নিজেই হেডার সারি তৈরি করে নেবে।
 
 ### ধাপ ২: Apps Script যোগ করুন
 - শিটে **Extensions → Apps Script** এ যান।
-- সব কোড মুছে নিচের কোডটি পেস্ট করুন:
+- সব কোড মুছে নিচের কোডটি পেস্ট করে **সেভ** করুন (Ctrl+S):
 
 ```javascript
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  // প্রথমবার চললে হেডার সারি যোগ করে
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow([
+      'Order ID', 'Time', 'Product', 'Name', 'Phone', 'Address',
+      'Quantity', 'Delivery Area', 'Delivery Charge', 'Subtotal', 'Total'
+    ]);
+  }
+
   var d = JSON.parse(e.postData.contents);
   sheet.appendRow([
-    d.time, d.product, d.name, d.phone, d.address, d.quantity, d.total
+    d.orderId, d.time, d.product, d.name, d.phone, d.address,
+    d.quantity, d.deliveryArea, d.deliveryCharge, d.subtotal, d.total
   ]);
+
   return ContentService
     .createTextOutput(JSON.stringify({ result: 'success' }))
     .setMimeType(ContentService.MimeType.JSON);
 }
 ```
+
+> ⚠️ **মনে রাখবেন:** উপরের **▶ Run** বাটনে ক্লিক করবেন না — তাহলে
+> `Cannot read properties of undefined (reading 'postData')` এরর দেখাবে।
+> কারণ ম্যানুয়ালি চালালে `e` (অর্ডার ডেটা) থাকে না। এই কোড শুধু আপনার
+> ওয়েবসাইটের ফর্ম থেকেই চলবে। তাই **Run** নয়, নিচের মতো **Deploy** করুন।
 
 ### ধাপ ৩: ডিপ্লয় করুন
 - **Deploy → New deployment** ক্লিক করুন।
