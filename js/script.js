@@ -29,12 +29,10 @@
   const toBn = (input) => String(input).replace(/\d/g, (d) => bnDigits[d]);
   const fmtBn = (n) => '৳' + toBn(n.toLocaleString('en-US'));
 
-  /* ---- Sticky header + back-to-top ---- */
+  /* ---- Sticky header shadow on scroll ---- */
   const header = document.getElementById('header');
-  const totop = document.getElementById('totop');
   const onScroll = () => {
     header.classList.toggle('scrolled', window.scrollY > 10);
-    totop.classList.toggle('show', window.scrollY > 500);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 
@@ -312,7 +310,6 @@
     });
   });
 
-  /* ---- Back to top + year ---- */
-  totop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  /* ---- Footer year ---- */
   document.getElementById('year').textContent = toBn(new Date().getFullYear());
 })();
