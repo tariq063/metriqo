@@ -27,13 +27,13 @@
 
 /* ---------- Reset ---------- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{
   font-family:'Hind Siliguri','Plus Jakarta Sans',system-ui,sans-serif;
   color:var(--ink);
   background:var(--bg);
   line-height:1.6;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
