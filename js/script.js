@@ -18,7 +18,7 @@
 
    Leave ORDER_ENDPOINT = '' to run in demo mode (just shows a toast).
    ================================================================== */
-  const ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwlGHShLhFyL11tQSajzJstKWmVHj_RKUelhjApYoZVO0a_EndFbn3H4Yq0pgy_Gk/exec';            // <-- paste your URL here
+  const ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwEK3zZNNdsW8fu-FckY-22TUqPuQmMLhbxYnJ0UaEHOIOmUCivIbblBzNzTMsQ5g_J/exec';            // <-- paste your URL here
   const ENDPOINT_TYPE  = 'sheet';       // 'formspree' | 'sheet'
 
 (function () {
