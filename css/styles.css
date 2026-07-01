@@ -188,6 +188,31 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.15;color:var(--navy)}
 .img-fallback__label{display:none;position:absolute;font-size:.8rem;color:var(--teal-deep);font-weight:700;background:#fff;padding:.3rem .7rem;border-radius:8px;box-shadow:var(--shadow-sm)}
 .img-fallback .img-fallback__label{display:inline-block}
 
+/* ---------- Auto-swipe carousel ---------- */
+.carousel{position:relative;width:100%;overflow:hidden}
+.carousel__track{display:flex;transition:transform .6s ease}
+.carousel__slide{min-width:100%;width:100%;display:block;object-fit:cover}
+.carousel__dots{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:7px;justify-content:center;z-index:2}
+.carousel__dot{width:9px;height:9px;padding:0;border:none;border-radius:999px;background:rgba(255,255,255,.6);box-shadow:0 1px 3px rgba(0,0,0,.35);cursor:pointer;transition:width .3s,background .3s}
+.carousel__dot.is-active{width:24px;background:#fff}
+
+/* full-width hero carousel — full image, no crop, all slides equal size */
+.hero-carousel{width:100%;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--line);margin-top:1.6rem}
+.hero-carousel .carousel{aspect-ratio:4/3}
+.hero-carousel .carousel__track{height:100%}
+.hero-carousel .carousel__slide{height:100%;object-fit:contain;background:#f6ede8}
+.hero__inner--solo{grid-template-columns:1fr}
+.hero__inner--solo .hero__copy{text-align:center;max-width:760px;margin:0 auto}
+.hero__inner--solo .hero__cta,.hero__inner--solo .hero__stats{justify-content:center}
+
+/* ---------- Product spec list ---------- */
+.spec{list-style:none;margin:.2rem 0 .9rem;padding:0;display:grid;gap:.35rem}
+.spec li{display:flex;gap:.45rem;align-items:flex-start;font-size:.86rem;color:var(--muted);line-height:1.35}
+
+/* single product: center & widen the lone card + let order image fill */
+.products:has(> .card:only-child){grid-template-columns:min(440px,100%);justify-content:center}
+.card__media--wide img{width:100%;height:100%;object-fit:cover}
+
 /* ---------- Features ---------- */
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 .feature{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem 1.4rem;text-align:center;transition:transform var(--t),box-shadow var(--t)}

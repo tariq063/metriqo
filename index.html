@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/styles.css?v=18" />
+  <link rel="stylesheet" href="css/styles.css?v=19" />
 
   <!-- Meta Pixel Code -->
   <script>
@@ -82,7 +82,7 @@
       <nav class="nav" id="nav">
         <a href="#home">হোম</a>
         <a href="#products">পণ্য</a>
-        <a href="#features">কেন আমরা</a>
+        <a href="#product-features">কেন আমরা</a>
         <a href="#order">অর্ডার</a>
         <a href="#faq">প্রশ্নোত্তর</a>
       </nav>
@@ -108,12 +108,12 @@
       <div class="grid-overlay"></div>
     </div>
 
-    <div class="container hero__inner">
+    <div class="container hero__inner hero__inner--solo">
       <div class="hero__copy reveal">
         <span class="pill">🔥 আজকের সেরা ডিল</span>
-        <h1>জাপানি টেকনোলজির অলরাউন্ডার <span class="grad-text">টর্চ লাইট</span></h1>
+        <h1>Sanford জাপানি টেকনোলজির অলরাউন্ডার <span class="grad-text">টর্চ লাইট</span></h1>
         <p class="hero__lead">
-          30000mAh রিচার্জেবল ব্যাটারি, পাওয়ার ব্যাংক, ২ কিমি আলোর ফোকাস ও IPX6 ওয়াটারপ্রুফ —
+          ৩০,০০০mAh রিচার্জেবল ব্যাটারি, পাওয়ার ব্যাংক, ২ কিমি আলোর ফোকাস ও ওয়াটারপ্রুফ —
           একটি টর্চ, অসংখ্য সমাধান! ক্যাশ অন ডেলিভারিতে সারা বাংলাদেশে।
         </p>
 
@@ -128,23 +128,18 @@
           <div class="stat"><b class="count" data-target="64">0</b><span>জেলায় ডেলিভারি</span></div>
         </div>
       </div>
+    </div>
 
-      <div class="hero__visual reveal" data-delay="120">
-        <div class="hero__card float">
-          <span class="badge badge--sale">-৪০%</span>
-          <div class="hero__img">
-            <img src="assets/Jambo_led_torch.png?v=1" alt="জাপানি অলরাউন্ডার টর্চ লাইট" onerror="this.style.opacity=0;this.parentElement.classList.add('img-fallback')" />
-            <span class="img-fallback__label">assets/Jambo_led_torch.png যোগ করুন</span>
+    <!-- ===== Full-width auto-swipe carousel ===== -->
+    <div class="container">
+      <div class="hero-carousel reveal" data-delay="120">
+        <div class="carousel" data-carousel data-interval="3000">
+          <div class="carousel__track">
+            <img class="carousel__slide" src="assets/carousel-1.png" alt="Sanford অলরাউন্ডার টর্চ লাইট" />
+            <img class="carousel__slide" src="assets/carousel-2.png" alt="৩০,০০০mAh রিচার্জেবল ব্যাটারি ও পাওয়ার ব্যাংক" />
+            <img class="carousel__slide" src="assets/carousel-3.png" alt="৫টি লাইটিং মোড ও ২ কিমি আলোর ফোকাস" />
           </div>
-          <div class="hero__card-body">
-            <div class="rating">★★★★★ <em>৪.৯ (১২৭+ রিভিউ)</em></div>
-            <h3>জাপানি অলরাউন্ডার টর্চ লাইট — 30000mAh</h3>
-            <div class="price">
-              <span class="price__new">৳১,১৯৯</span>
-              <span class="price__old">৳১,৯৯০</span>
-            </div>
-            <a href="#order" class="btn btn--primary btn--block" data-product="জাপানি অলরাউন্ডার টর্চ লাইট">ডিলটি নিন</a>
-          </div>
+          <div class="carousel__dots"></div>
         </div>
       </div>
     </div>
@@ -169,39 +164,41 @@
       <div class="products">
         <!-- Product: LED Torch Light -->
         <article class="card reveal">
-          <div class="card__media">
+          <div class="card__media card__media--wide">
             <span class="badge badge--sale">-৪০%</span>
-            <img src="assets/Jambo_led_torch.png?v=1" alt="জাপানি অলরাউন্ডার টর্চ লাইট" onerror="this.style.opacity=0;this.parentElement.classList.add('img-fallback')" />
-            <span class="img-fallback__label">assets/Jambo_led_torch.png</span>
+            <img src="assets/order-image.png" alt="জাপানি অলরাউন্ডার টর্চ লাইট — অর্ডার করুন" onerror="this.style.opacity=0;this.parentElement.classList.add('img-fallback')" />
+            <span class="img-fallback__label">assets/order-image.png</span>
           </div>
           <div class="card__body">
             <div class="rating">★★★★★ <em>৪.৯</em></div>
-            <h3>জাপানি অলরাউন্ডার টর্চ লাইট</h3>
-            <p>30000mAh রিচার্জেবল • পাওয়ার ব্যাংক • ২ কিমি আলোর ফোকাস • IPX6 ওয়াটারপ্রুফ • ৫টি লাইটিং মোড।</p>
+            <h3>Sanford অলরাউন্ডার টর্চ লাইট</h3>
+            <p>৩০,০০০mAh রিচার্জেবল • সুপার ব্রাইট স্পটলাইট • পাওয়ার ব্যাংক • ৫টি মোড • ওয়াটারপ্রুফ।</p>
             <div class="price">
               <span class="price__new">৳১,১৯৯</span>
               <span class="price__old">৳১,৯৯০</span>
             </div>
-            <a href="#order" class="btn btn--primary btn--block" data-product="জাপানি অলরাউন্ডার টর্চ লাইট">অর্ডার করুন</a>
+            <a href="#order" class="btn btn--primary btn--block" data-product="Sanford অলরাউন্ডার টর্চ লাইট — ৩০,০০০mAh">অর্ডার করুন</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== Features / Why Us ===== -->
-  <section class="section section--alt" id="features">
+  <!-- ===== Product features / specs ===== -->
+  <section class="section section--alt" id="product-features">
     <div class="container">
       <div class="section__head reveal">
-        <span class="eyebrow">কেন Tarson BD</span>
-        <h2>নিশ্চিন্তে <span class="grad-text">কেনাকাটা</span></h2>
-        <p>প্রিমিয়াম কেনাকাটাকে আমরা করি সহজ, নিরাপদ ও নির্ভরযোগ্য।</p>
+        <span class="eyebrow">কেন এই টর্চ</span>
+        <h2>Sanford টর্চের <span class="grad-text">বিশেষ ফিচার</span></h2>
+        <p>জাপানি টেকনোলজির শক্তিশালী, মাল্টি-ফাংশন অলরাউন্ডার টর্চ লাইট।</p>
       </div>
-
       <div class="features">
-        <div class="feature reveal"><div class="feature__ic">💵</div><h3>ক্যাশ অন ডেলিভারি</h3><p>কোনো অগ্রিম পেমেন্ট নেই। পণ্য হাতে পেয়ে তবেই পেমেন্ট করুন।</p></div>
-        <div class="feature reveal" data-delay="80"><div class="feature__ic">🚚</div><h3>দ্রুত ডেলিভারি</h3><p>২–৩ কর্মদিবসের মধ্যে সারা দেশে পৌঁছে যাবে।</p></div>
-        <div class="feature reveal" data-delay="160"><div class="feature__ic">🛡️</div><h3>অরিজিনাল পণ্য</h3><p>প্রতিটি পণ্য ১০০% আসল ও মান যাচাই করা।</p></div>
+        <div class="feature reveal"><div class="feature__ic">🔋</div><h3>৩০,০০০mAh ব্যাটারি</h3><p>বড় ক্যাপাসিটি রিচার্জেবল লিথিয়াম ব্যাটারি — একটানা অনেকক্ষণ আলো।</p></div>
+        <div class="feature reveal" data-delay="80"><div class="feature__ic">🔦</div><h3>সুপার ব্রাইট স্পটলাইট</h3><p>২ কিমি পর্যন্ত আলোর ফোকাস, জুম করে ছোট-বড় করা যায়।</p></div>
+        <div class="feature reveal" data-delay="160"><div class="feature__ic">🔌</div><h3>পাওয়ার ব্যাংক</h3><p>মোবাইল, স্মার্টওয়াচ বা অন্য ডিভাইস চার্জ দিন।</p></div>
+        <div class="feature reveal"><div class="feature__ic">💡</div><h3>৫টি লাইটিং মোড</h3><p>হাই / মিডিয়াম / লো / স্ট্রোব / SOS — যেকোনো প্রয়োজনে।</p></div>
+        <div class="feature reveal" data-delay="80"><div class="feature__ic">⚡</div><h3>Type-C ফাস্ট চার্জিং</h3><p>USB ও Type-C পোর্ট, সাথে ডিজিটাল পাওয়ার ডিসপ্লে।</p></div>
+        <div class="feature reveal" data-delay="160"><div class="feature__ic">🌧️</div><h3>ওয়াটারপ্রুফ</h3><p>বৃষ্টি-ধুলো-খারাপ আবহাওয়ায় নিশ্চিন্তে ব্যবহারযোগ্য।</p></div>
       </div>
     </div>
   </section>
@@ -240,7 +237,7 @@
         <div class="field">
           <label for="product">পণ্য</label>
           <select id="product" name="product">
-            <option value="জাপানি অলরাউন্ডার টর্চ লাইট" data-price="1199">জাপানি অলরাউন্ডার টর্চ লাইট — ৳১,১৯৯</option>
+            <option value="Sanford অলরাউন্ডার টর্চ লাইট — ৩০,০০০mAh" data-price="1199">Sanford অলরাউন্ডার টর্চ লাইট (৩০,০০০mAh) — ৳১,১৯৯</option>
           </select>
         </div>
 
@@ -375,12 +372,12 @@
       <div class="footer__col">
         <h4>শপ</h4>
         <a href="#products">অলরাউন্ডার টর্চ লাইট</a>
-        <a href="#features">কেন এই টর্চ</a>
+        <a href="#product-features">কেন এই টর্চ</a>
         <a href="#order">অর্ডার করুন</a>
       </div>
       <div class="footer__col">
         <h4>কোম্পানি</h4>
-        <a href="#features">কেন আমরা</a>
+        <a href="#product-features">কেন আমরা</a>
         <a href="#faq">প্রশ্নোত্তর</a>
         <a href="#order">অর্ডার</a>
       </div>
@@ -426,6 +423,6 @@
     </div>
   </div>
 
-  <script src="js/script.js?v=17"></script>
+  <script src="js/script.js?v=18"></script>
 </body>
 </html>

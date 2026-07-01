@@ -98,6 +98,47 @@
   );
   document.querySelectorAll('.count').forEach((el) => cio.observe(el));
 
+  /* ---- Auto-swipe carousel(s) ---- */
+  document.querySelectorAll('[data-carousel]').forEach((root) => {
+    const track = root.querySelector('.carousel__track');
+    const slides = [...root.querySelectorAll('.carousel__slide')];
+    const dotsWrap = root.querySelector('.carousel__dots');
+    if (!track || slides.length === 0) return;
+
+    let idx = 0;
+    const interval = parseInt(root.dataset.interval, 10) || 3500;
+
+    // build dots
+    if (dotsWrap) {
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.className = 'carousel__dot' + (i === 0 ? ' is-active' : '');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'ছবি ' + (i + 1));
+        b.addEventListener('click', () => go(i, true));
+        dotsWrap.appendChild(b);
+      });
+    }
+    const dots = dotsWrap ? [...dotsWrap.children] : [];
+
+    const go = (n, user) => {
+      idx = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + -idx * 100 + '%)';
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+      if (user) restart();
+    };
+
+    let timer = setInterval(() => go(idx + 1), interval);
+    const restart = () => {
+      clearInterval(timer);
+      timer = setInterval(() => go(idx + 1), interval);
+    };
+
+    // pause while hovering
+    root.addEventListener('mouseenter', () => clearInterval(timer));
+    root.addEventListener('mouseleave', restart);
+  });
+
   /* ---- Order: product + quantity + delivery + live total ---- */
   const productSel = document.getElementById('product');
   const qtyInput = document.getElementById('qty');
